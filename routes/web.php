@@ -22,3 +22,7 @@ Route::get('/', 'PagesController@home');
 
 
 Route::get('/home', 'HomeController@index')->name('home')->middleware('auth');
+
+
+Route::get('/contact', 'ContactController@index');
+Route::post('/contact', 'ContactController@store');
