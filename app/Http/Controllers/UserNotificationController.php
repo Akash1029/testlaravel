@@ -12,8 +12,6 @@ class UserNotificationController extends Controller
     {
     	$notifications = auth()->user()->unreadNotifications;
 
-    	$notifications = markAsRead();
-
     	return view('notification.show', [
     		'notifications' => $notifications
     	]);

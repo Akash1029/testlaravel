@@ -30,3 +30,6 @@ Route::post('/contact', 'ContactController@store');
 Route::get('/payment/create', 'PaymentsController@create')->middleware('auth');
 Route::post('/payment', 'PaymentsController@store')->middleware('auth');
 Route::get('/notifications', 'UserNotificationController@show')->middleware('auth');
+
+Route::get('/conversations', 'ConversationController@index');
+Route::get('/conversations/{conversation}','ConversationController@show');

@@ -26,6 +26,6 @@ class AwardListener
      */
     public function handle(PurchaseProcessed $event)
     {
-        //
+        var_dump("Awards");
     }
 }
