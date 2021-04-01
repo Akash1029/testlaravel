@@ -33,3 +33,7 @@ Route::get('/notifications', 'UserNotificationController@show')->middleware('aut
 
 Route::get('/conversations', 'ConversationController@index');
 Route::get('/conversations/{conversation}','ConversationController@show');
+
+Route::get('/report', function() {
+    return "All the Reports";
+})->middleware('can:view_records');

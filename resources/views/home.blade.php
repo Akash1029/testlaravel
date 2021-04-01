@@ -13,9 +13,18 @@
                             {{ session('status') }}
                         </div>
                     @endif
-
                     {{ __('Hello!') }}
                     {{ Auth::user()->name }}
+
+                    <div class="ability">
+                        @can('edit_forum')
+                        <a href="#">Edit Forum</a>
+                        @endcan
+
+                        @can('view_records')
+                        <a href="/report">view Reports</a>
+                        @endcan
+                    </div>
                 </div>
             </div>
         </div>
